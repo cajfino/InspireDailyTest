@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS FLEXBOX</title>
+    <style>
+      .container {
+        background-color: crimson;
+      }
+      header {
+        display: flex;
+        background-color: plum;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo {
+        width: 100px;
+        height: 100px;
+        background-color: royalblue;
+      }
+      nav {
+        background-color: aquamarine;
+      }
+      .hero {
+        background-color: chartreuse;
+        padding: 10px;
+      }
+      .featured_technology {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+      .featured_technology section {
+        background-color: aqua;
+        padding: 10px;
+        border: 2px dotted black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h2 class="logo">Logo</h2>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">Product</a>
+          <a href="#">Service</a>
+          <a href="#">Contact</a>
+          <a href="#">About</a>
+        </nav>
+      </header>
+      <div class="hero">
+        <p>Show your featured product or service here</p>
+      </div>
+      <article class="featured_technology">
+        <section><h2>Section 1</h2></section>
+        <section><h2>Section 2</h2></section>
+        <section><h2>Section 3</h2></section>
+      </article>
+
+      <article class="featured_brand">
+        <section><h2>Welcome to Global brands</h2></section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore in
+          omnis autem velit earum laboriosam, doloremque dolorum, aspernatur
+          fugiat illo modi at repellat odio assumenda ratione laborum esse!
+          Sint, sed. Ratione consequatur expedita minima aperiam eum deserunt
+          enim numquam dolores, atque vel blanditiis ducimus nostrum similique
+          suscipit architecto alias error commodi! Illo error temporibus magni
+          esse qui consequuntur id mollitia iusto reiciendis nam ut sint dolor
+          quo sed, sapiente ducimus quasi enim beatae voluptatibus eum nihil
+          odit fugit. Sunt, libero rem ut ab molestias eum accusamus ratione
+          deserunt enim tempore, adipisci modi debitis voluptas architecto minus
+          quod quasi inventore a.
+        </p>
+      </article>
+      <footer>
+        <p>&copy;2024 Global Brands</p>
+      </footer>
+    </div>
+  </body>
+</html>

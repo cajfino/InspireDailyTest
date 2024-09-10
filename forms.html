@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced HTML Forms</title>
+    <link rel="stylesheet" href="css/form.css" />
+  </head>
+  <body>
+    <form action="/submit" id="advanced-form">
+      <!-- step 1: personal information -->
+      <fieldset id="step1">
+        <legend>Personal Information</legend>
+        <!--First name group-->
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input
+            type="text"
+            id="first-name"
+            name="first-name"
+            tabindex="1"
+            required
+            aria-required="true"
+          />
+          <span class="tooltip" id="tooltip-first-name"
+            >Enter your first name (as it appears on your driver's
+            license)</span
+          >
+        </div>
+        <!-- Last name group -->
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input
+            type="text"
+            id="last-name"
+            name="last-name"
+            tabindex="2"
+            required
+            aria-required="true"
+          />
+          <span class="tooltip" id="tooltip-last-name"
+            >Enter your last name (as it appears on your driver's license)</span
+          >
+        </div>
+        <!-- Email Group -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            tabindex="3"
+            required
+            aria-required="true"
+          />
+          <span class="tooltip" id="tooltip-email"
+            >Enter a valid email address. We will send you a confirmation</span
+          >
+        </div>
+        <button type="button" onclick="showStep(2)" tabindex="4">Next</button>
+      </fieldset>
+
+      <!-- Step 2: Address -->
+      <fieldset id="step2">
+        <legend>Address</legend>
+        <div class="form-group">
+          <label for="street">Street</label>
+          <input
+            type="text"
+            id="street"
+            tabindex="5"
+            required
+            aria-required="true"
+          />
+          <span class="tooltip" id="tooltip-street"
+            >Enter your street address</span
+          >
+        </div>
+        <div class="form-group">
+          <label for="suburb">Suburb</label>
+          <input
+            type="text"
+            id="suburb"
+            tabindex="6"
+            required
+            aria-required="true"
+          />
+          <span class="tooltip" id="tooltip-suburb">Enter your suburb</span>
+        </div>
+        <div class="form-group">
+          <label for="postcode">Postcode</label>
+          <input
+            type="text"
+            id="postcode"
+            tabindex="7"
+            required
+            aria-required="true"
+            minlength="3"
+            maxlength="4"
+          />
+          <span class="tooltip" id="tooltip-postcode">Enter your postcode</span>
+        </div>
+        <div class="form-group">
+          <label for="state">State</label>
+          <input
+            type="text"
+            id="state"
+            tabindex="8"
+            required
+            aria-required="true"
+          />
+          <span class="tooltip" id="tooltip-state">Enter your state</span>
+        </div>
+        <button type="button" onclick="showStep(1)" tabindex="9">Back</button>
+        <button type="submit" tabindex="10">Submit</button>
+      </fieldset>
+    </form>
+
+    <!-- Javascript -->
+    <script src="js/forms.js"></script>
+  </body>
+</html>

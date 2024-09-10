@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Menu</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #fff;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul {
+        list-style: none;
+      }
+      .header {
+        background-color: #000;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        padding: 30px;
+      }
+      .logo {
+        display: inline-block;
+        color: #fff;
+        font-size: 25px;
+      }
+      .nav {
+        width: 100%;
+        height: fit-content;
+        position: fixed;
+        overflow: hidden;
+        background-color: orange;
+        left: 0;
+        top: 89px;
+      }
+      .menu a {
+        display: block;
+        color: #fff;
+        padding: 20px;
+      }
+      .menu a:hover {
+        background-color: #333;
+      }
+      .nav {
+        max-height: 0;
+        transition: max-height 0.5s ease-out;
+      }
+      .hamburger-menu {
+        cursor: pointer;
+        float: right;
+        padding: 5px 5px;
+      }
+      .line {
+        background-color: #fff;
+        display: block;
+        height: 3px;
+        position: relative;
+        width: 25px;
+        margin-top: 3px;
+      }
+      .line::after .line::before {
+        background-color: #fff;
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transition: all 0.2s ease-out;
+      }
+      .line::before {
+        top: 5px;
+      }
+      .line::after {
+        top: -5px;
+      }
+      .top-menu {
+        display: none;
+      }
+      .top-menu:checked ~ nav {
+        max-height: 100%;
+      }
+      .top-menu:checked .hamburger-menu .line::before {
+        transform: rotate(-45deg);
+        top: 0;
+      }
+      .top-menu:checked .hamburger-menu .line::after {
+        transform: rotate(45deg);
+        top: 0;
+      }
+      /**************************************************
+ MEDIA QUERIES
+**************************************************/
+
+      @media (min-width: 768px) {
+        .nav {
+          max-height: none;
+          top: 0;
+          position: relative;
+          float: right;
+          width: fit-content;
+          background-color: transparent;
+          margin: 0;
+        }
+        .menu li {
+          float: left;
+        }
+        .menu a:hover {
+          background-color: transparent;
+          color: #444;
+        }
+        .hamburger-menu {
+          display: none;
+        }
+        .header {
+          position: fixed;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header" role="banner">
+      <a href="index.html" class="logo">INSPIRE DAILY</a>
+      <input type="checkbox" id="top-menu" class="top-menu" />
+      <label class="hamburger-menu" for="top-menu">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </label>
+
+      <nav class="nav" role="navigation">
+        <ul class="menu" role="list">
+          <li role="listitem"><a href="#section1">Shop</a></li>
+          <li><a href="#section2">Service</a></li>
+          <li><a href="#section3">About</a></li>
+          <li><a href="#section4">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="section1">
+        <h1>Shop</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum alias
+          nulla maxime voluptatum ex recusandae natus esse maiores? Commodi
+          possimus reiciendis dolore modi provident esse fuga corrupti aperiam
+          officia fugiat!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum alias
+          nulla maxime voluptatum ex recusandae natus esse maiores? Commodi
+          possimus reiciendis dolore modi provident esse fuga corrupti aperiam
+          officia fugiat!
+        </p>
+      </section>
+
+      <section id="section2">
+        <h2>Service</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum alias
+          nulla maxime voluptatum ex recusandae natus esse maiores? Commodi
+          possimus reiciendis dolore modi provident esse fuga corrupti aperiam
+          officia fugiat!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum alias
+          nulla maxime voluptatum ex recusandae natus esse maiores? Commodi
+          possimus reiciendis dolore modi provident esse fuga corrupti aperiam
+          officia fugiat!
+        </p>
+      </section>
+
+      <section id="section3">
+        <h2>About</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum alias
+          nulla maxime voluptatum ex recusandae natus esse maiores? Commodi
+          possimus reiciendis dolore modi provident esse fuga corrupti aperiam
+          officia fugiat!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum alias
+          nulla maxime voluptatum ex recusandae natus esse maiores? Commodi
+          possimus reiciendis dolore modi provident esse fuga corrupti aperiam
+          officia fugiat!
+        </p>
+      </section>
+
+      <section id="section4">
+        <h2>Contact</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum alias
+          nulla maxime voluptatum ex recusandae natus esse maiores? Commodi
+          possimus reiciendis dolore modi provident esse fuga corrupti aperiam
+          officia fugiat!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum alias
+          nulla maxime voluptatum ex recusandae natus esse maiores? Commodi
+          possimus reiciendis dolore modi provident esse fuga corrupti aperiam
+          officia fugiat!
+        </p>
+      </section>
+    </main>
+
+    <footer>copyright&copy;2024 Inspire Daily</footer>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Flexbox</title>
+    <style>
+      html {
+        background-color: black;
+      }
+      .container {
+        display: flex;
+        background-color: chartreuse !important;
+        padding: 5px;
+        /* justify-content: space-between; */
+        height: 200px;
+        /* align-items: stretch; */
+        align-content: space-between;
+        width: 50%;
+        align-items: center;
+        align-content: stretch;
+        flex-wrap: wrap;
+
+        /* justify-content: space-around; */
+        /* flex-direction: column; */
+        /* flex-direction: row-reverse; */
+        /* flex-direction: row; */
+        /* flex-flow: column wrap; */
+        /* flex-wrap: wrap-reverse; */
+      }
+      div:nth-child(1) {
+        /* background-color: cadetblue;
+        padding: 10px; */
+      }
+      div:nth-child(2) {
+        /* background-color: greenyellow;
+        padding: 10px; */
+      }
+      div:nth-child(3) {
+        /* background-color: deepskyblue;
+        padding: 10px; */
+      }
+      div {
+        background-color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Flex enables A,B,C to be sorted alongside instead of on top of each other -->
+      <div>AAAAAAAAAAAAAAAAAAA</div>
+      <div>BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB</div>
+      <div>CCCCCCCC</div>
+    </div>
+  </body>
+</html>

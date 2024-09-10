@@ -1,0 +1,78 @@
+:root {
+  --green: #bbce8a;
+  --light_green: #e2f9b8;
+  --orange: #d16014;
+  --olive: #313715;
+  --tea_green: #e2f9b8;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.container {
+  background-color: tomato;
+}
+
+.main-header {
+  background-color: pink;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  background-color: lightgrey;
+}
+
+.main-menu ul {
+  display: flex;
+  list-style: none;
+}
+
+.main-menu ul li {
+  display: block;
+  padding: 10px;
+  background-color: aqua;
+}
+
+a:link {
+  color: var(--orange);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+}
+
+.hero {
+  background-color: lightgrey;
+}
+
+.main-content {
+  background-color: cornflowerblue;
+  display: flex;
+}
+
+.main-footer {
+  background-color: lightgray;
+}
+
+.tooltip {
+  /* Get code to place here */
+}
+
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: scale-down;
+}
+/*I wrote this*/
+
+/*****************************
+    Media Queries
+******************************/
+@media only screen and (min-width: 480px) {
+  body {
+    background-color: var(--orange);
+  }
+}

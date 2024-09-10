@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*Child Selector*/
+      div > h2 {
+        background-color: pink;
+        /*The h2 is the child of the div element*/
+      }
+
+      /*Sibling Selector*/
+      div + h2 {
+        background-color: orange;
+      }
+
+      /*General Sibling Selector - all the neighbours
+      div ~ h2 {
+        background-color: blue;
+      }
+        */
+
+      div:hover p {
+        background-color: blueviolet;
+      }
+
+      div:first-child {
+        background-color: blue;
+      }
+
+      p::first-letter {
+        background-color: lawngreen;
+        font-size: 36px;
+      }
+
+      p::first-line {
+        font-style: italic;
+      }
+
+      img:hover {
+        opacity: 0.3;
+      }
+      /* Value can only be between 0 and 1 or a percentage */
+    </style>
+  </head>
+  <body>
+    <div>
+      <h2>Products</h2>
+      <h2>Service</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam in non
+        exercitationem nesciunt sint recusandae necessitatibus corrupti saepe
+        delectus. Quidem fugit pariatur earum incidunt suscipit a sapiente fuga.
+        Sapiente, iste!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam in non
+        exercitationem nesciunt sint recusandae necessitatibus corrupti saepe
+        delectus. Quidem fugit pariatur earum incidunt suscipit a sapiente fuga.
+        Sapiente, iste!
+      </p>
+    </div>
+    <h2>this is not a child of the div and is unaffected</h2>
+    <h2>
+      this is not adjacent so it is unaffected - the above is directly after and
+      is affected - google this
+    </h2>
+    <img src="img/duck.jpg" alt="" />
+  </body>
+</html>
